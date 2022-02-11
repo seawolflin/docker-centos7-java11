@@ -4,7 +4,7 @@ FROM centos:7
 COPY jdk-11.0.11_linux-x64_bin.tar.gz /usr/jdk/
 
 RUN cd /usr/jdk \
-    && tar -vxzf /usr/jdk/jdk-11.0.11_linux-x64_bin.tar.gz \
+    && tar -vxf /usr/jdk/jdk-11.0.11_linux-x64_bin.tar.gz \
     && rm -rf jdk-11.0.11_linux-x64_bin.tar.gz \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo 'Asia/Shanghai' >/etc/timezone
